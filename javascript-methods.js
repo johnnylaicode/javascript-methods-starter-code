@@ -1,15 +1,17 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  let result = [];
-  for(let i =0; i < this.length; i++){
-      result.append(callbackFn(this[i],i,this))
-  }
-  return result;
+
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // 
+  let result = [];
+  for(let i =0; i < this.length; i++){
+      if(callbackFn(this[i],i,this) === true){
+        result.append(this[i])
+      }
+  }
+  return result;
 };
 
 // SOME //
