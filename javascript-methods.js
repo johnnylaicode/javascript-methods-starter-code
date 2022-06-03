@@ -1,11 +1,15 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  let result = [];
+  for(let i =0; i < this.length; i++){
+      result.push(callbackFn(this[i],i,this));
+  }
+  return result;
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+
 };
 
 // SOME //
