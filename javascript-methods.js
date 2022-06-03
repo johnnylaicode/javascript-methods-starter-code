@@ -5,11 +5,18 @@ Array.prototype.myMap = function(callbackFn) {
       result.push(callbackFn(this[i],i,this));
   }
   return result;
+
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-
+  let result = [];
+  for(let i =0; i < this.length; i++){
+      if(callbackFn(this[i],i,this) === true){
+        result.push(this[i])
+      }
+  }
+  return result;
 };
 
 // SOME //
