@@ -1,6 +1,10 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  let result = [];
+  for(let i =0; i < this.length; i++){
+      result.append(callbackFn(this[i],i,this))
+  }
+  return this;
 };
 
 // FILTER //
