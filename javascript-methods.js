@@ -40,8 +40,27 @@ Array.prototype.myEvery = function(callbackFn) {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+Array.prototype.myReduce = function(callbackFn,initialValue=0) {
+  let result = initialValue;
+  let i = 0;
+  let previousValue = result;
+  if(i === 0 && initialValue){
+    result = callbackFn(initialValue,this[i],i,this);
+    previousValue = result;
+    i += 1;
+  }else {
+    result = callbackFn(previousValue,this[i],i,this); 
+    i += 1;
+  }
+
+  while (i < this.length){
+  
+    previousValue = result;
+    result = callbackFn(previousValue,this[i],i,this);
+    i += 1
+    
+  }
+  return result;
 };
 
 // INCLUDES //
@@ -68,3 +87,13 @@ Object.myKeys = function(object) {
 Object.myValues = function(object) {
   // Place your code here.
 };
+
+const array1 = [4, 4, 4, 4];
+const array2 = [4,4,4,4];
+// should be 16
+const initialValue = 0;
+const sumWithInitial = array1.reduce((previousValue, currentValue) => previousValue * currentValue,10);
+const myTest = array2.myReduce((previousValue, currentValue) => previousValue * currentValue,10);
+
+console.log(sumWithInitial);
+console.log(myTest);
