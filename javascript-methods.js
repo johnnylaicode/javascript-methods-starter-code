@@ -65,7 +65,13 @@ Array.prototype.myReduce = function(callbackFn,initialValue=0) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  // Place your code here.
+  // checks if element is in array
+  for(let element of this){
+    if(element === searchElement){
+      return true
+    }
+  }
+  return false;
 };
 
 // INDEXOF //
@@ -87,13 +93,3 @@ Object.myKeys = function(object) {
 Object.myValues = function(object) {
   // Place your code here.
 };
-
-const array1 = [4, 4, 4, 4];
-const array2 = [4,4,4,4];
-// should be 16
-const initialValue = 0;
-const sumWithInitial = array1.reduce((previousValue, currentValue) => previousValue * currentValue,10);
-const myTest = array2.myReduce((previousValue, currentValue) => previousValue * currentValue,10);
-
-console.log(sumWithInitial);
-console.log(myTest);
