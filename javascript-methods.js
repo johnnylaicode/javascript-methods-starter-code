@@ -9,8 +9,15 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 ----------------------------------------------------------*/
 
 // MAP //
+// The map() method creates a new array populated with the results 
+// of calling a provided function on every element in the calling array. 
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  let new_array = [];
+  for (let i = 0; i < this.length; i++) {   
+    if (this[i] === undefined) continue;
+    new_array.push(callbackFn(this[i], i, this));
+  }
+  return new_array;
 };
 
 // FILTER //
