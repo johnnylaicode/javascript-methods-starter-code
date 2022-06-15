@@ -51,8 +51,17 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // EVERY //
+// The every() method tests whether all elements in the array 
+// pass the test implemented by the provided function. 
+// It returns a Boolean value. 
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  for (let i = 0; i < this.length; i++) {   
+    if (this[i] === undefined) continue;
+    if (callbackFn(this[i], i, this) == false) {
+      return false;
+    };
+  }
+  return true;
 };
 
 // REDUCE //
