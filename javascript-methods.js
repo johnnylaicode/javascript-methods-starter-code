@@ -21,8 +21,17 @@ Array.prototype.myMap = function(callbackFn) {
 };
 
 // FILTER //
+// The filter() method creates a new array with all elements 
+// that pass the test implemented by the provided function
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  let new_array = [];
+  for (let i = 0; i < this.length; i++) {   
+    if (this[i] === undefined) continue;
+    if (callbackFn(this[i], i, this) == true) {
+      new_array.push(this[i]);
+    };
+  }
+  return new_array;
 };
 
 // SOME //
