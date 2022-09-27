@@ -27,7 +27,6 @@ Array.prototype.mySome = function(callbackFn) {
 Array.prototype.myEvery = function(callbackFn) {
   for(let i = 0; i < this.length; i++){
     if(this[i] === undefined) continue;
-    callbackFn(this[i],i,this);
     if(callbackFn(this[i],i,this) === false) return false;
   }
   return true;
