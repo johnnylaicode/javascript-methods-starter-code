@@ -10,54 +10,65 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  for(let i = 0; i < this.length; i++){
-    if(this[i] === undefined) continue;
-    if(callbackFn(this[i],i,this) === false) return false;
-  }
-  return true;
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+        if (callbackFn(this[i], i, this) === false) return false;
+    }
+    return true;
 };
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-  // Place your code here.
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === searchElement) {
+            return i;
+        }
+    }
+    return -1;
 };
+
+
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+    // Place your code here.
 };
 
-// KEYS //
+// KEYS:Without using the native "Object.keys()" method of JavaScript,//
+//compose a function titled "myKeys"that will take in an object//
+//@return all of the keys of the key: value pairs of that object. //
 Object.myKeys = function(object) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // VALUES //
+// that will take in an object and return all of the values of the key:value pairs of that object.//
+
 Object.myValues = function(object) {
-  // Place your code here.
+    // Place your code here.
 };
