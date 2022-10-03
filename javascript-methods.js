@@ -67,8 +67,14 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 //@return all of the keys of the key: value pairs of that object. //
 Object.myKeys = function(object) {
     // Place your code here.
+    for (a in object) {
+        return a
+    }
+
+    return -1;
 };
 
+// expected output: Array ["a", "b", "c"]
 // VALUES //
 // that will take in an object and return all of the values of the key:value pairs of that object.//
 
