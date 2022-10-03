@@ -51,13 +51,16 @@ Array.prototype.myIndexOf = function(searchElement) {
     }
     return -1;
 };
-
-
-
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-    // Place your code here.
+    for (let i = this.length - 1; i >= 0; i--) {
+        if (this[i] === searchElement) {
+            return i;
+        }
+    }
+    return -1;
 };
+
 
 // KEYS:Without using the native "Object.keys()" method of JavaScript,//
 //compose a function titled "myKeys"that will take in an object//
