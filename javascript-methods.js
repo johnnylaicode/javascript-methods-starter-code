@@ -62,20 +62,3 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 Object.myKeys = function(object) {
   // Place your code here.
 };
-
-// VALUES //
-Object.myValues = function(object) {
-  // Place your code here.
-};
-const array1 = [1, 2, ,3];
-
-console.log(array1.myIncludes(2));
-// expected output: true
-
-const pets = ['cat', 'dog', 'bat'];
-
-console.log(pets.myIncludes('cat'));
-// expected output: true
-
-console.log(array1.myIncludes(undefined));
-// expected output: false
