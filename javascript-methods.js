@@ -61,23 +61,24 @@ Array.prototype.myLastIndexOf = function(searchElement) {
     return -1;
 };
 
-
-// KEYS:Without using the native "Object.keys()" method of JavaScript,//
-//compose a function titled "myKeys"that will take in an object//
-//@return all of the keys of the key: value pairs of that object. //
+//Object Keys 
 Object.myKeys = function(object) {
     // Place your code here.
-    for (a in object) {
-        return a
+    let output = [];
+    for (n in object) {
+        output.push(n)
     }
 
-    return -1;
+    return output;
 };
 
-// expected output: Array ["a", "b", "c"]
-// VALUES //
-// that will take in an object and return all of the values of the key:value pairs of that object.//
-
+//object value
 Object.myValues = function(object) {
-    // Place your code here.
-};
+
+    let output = [];
+    for (n in object) {
+        output.push(object[n])
+    }
+    return output;
+
+}
