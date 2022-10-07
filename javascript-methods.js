@@ -10,65 +10,74 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+    // Place your code here.
 };
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  for(let i = 0; i < this.length; i++){
-    if(this[i] === undefined) continue;
-    if(callbackFn(this[i],i,this) === false) return false;
-  }
-  return true;
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+        if (callbackFn(this[i], i, this) === false) return false;
+    }
+    return true;
 };
 
 // REDUCE //
-Array.prototype.myReduce = function(callbackFn,initialValue) {
-  let result = initialValue;
-  for (let i = 0; i < this.length; i++) {
-    if(this[i]==null)continue;
-    result = callbackFn(result, this[i], i, this)
-  } 
-  return result;
+Array.prototype.myReduce = function(callbackFn) {
+    // Place your code here.
 };
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  for(let i = 0; i< this.length; i++){
-    if(this[i]===searchElement){
-      return true;
-    }
-  }
-  return false;
+    // Place your code here.
 };
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-  // Place your code here.
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === searchElement) {
+            return i;
+        }
+    }
+    return -1;
 };
-
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+    for (let i = this.length - 1; i >= 0; i--) {
+        if (this[i] === searchElement) {
+            return i;
+        }
+    }
+    return -1;
 };
 
-// KEYS //
+//Object Keys 
 Object.myKeys = function(object) {
-  // Place your code here.
+    // Place your code here.
+    let output = [];
+    for (n in object) {
+        output.push(n)
+    }
+
+    return output;
 };
 
-// VALUES //
+//object value
 Object.myValues = function(object) {
-  // Place your code here.
-};
+    let output = [];
+    for (n in object) {
+        output.push(n)
+    }
+    return output
 
+}
