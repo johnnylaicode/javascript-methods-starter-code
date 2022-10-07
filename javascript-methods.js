@@ -10,12 +10,16 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-    // Place your code here.
+    const resultArray = [];
+    for (let i = 0; i < this.length; i++) {
+        resultArray.push(callbackFn(this[i], i, this));
+    }
+    return resultArray;
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-    // Place your code here.
+    // Place your code hergie.
 };
 
 // SOME //
