@@ -19,7 +19,12 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-    // Place your code here.
+    resultArray = []; 
+    for (let i = 0; i < this.length; i++) {
+        if (callbackFn(this[i])) 
+            resultArray.push(this[i]);
+    }
+    return filtered;
 };
 
 // SOME //
