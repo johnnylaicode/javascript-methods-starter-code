@@ -21,8 +21,8 @@ Array.prototype.myMap = function(callbackFn) {
 Array.prototype.myFilter = function(callbackFn) {
     resultArray = []; 
     for (let i = 0; i < this.length; i++) {
-        if (callbackFn(this[i], i, this)) 
-            resultArray.push(this[i], i, this);
+        if (callbackFn(this[i])) 
+            resultArray.push(this[i]);
     }
     return resultArray;
 };
