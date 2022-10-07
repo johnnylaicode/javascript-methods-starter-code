@@ -19,7 +19,7 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-    // Place your code hergie.
+    // Place your code here.
 };
 
 // SOME //
