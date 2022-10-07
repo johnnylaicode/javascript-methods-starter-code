@@ -74,11 +74,10 @@ Object.myKeys = function(object) {
 
 //object value
 Object.myValues = function(object) {
-
     let output = [];
     for (n in object) {
-        output.push(object[n])
+        output.push(n)
     }
-    return output;
+    return output
 
 }
