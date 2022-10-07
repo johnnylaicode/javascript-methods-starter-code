@@ -34,12 +34,22 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-    // Place your code here.
+  let result = initialValue;
+  for (let i = 0; i < this.length; i++) {
+    if(this[i]==null)continue;
+    result = callbackFn(result, this[i], i, this)
+  } 
+  return result;
 };
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-    // Place your code here.
+  for(let i = 0; i< this.length; i++){
+    if(this[i]===searchElement){
+      return true;
+    }
+  }
+  return false;
 };
 
 // INDEXOF //
